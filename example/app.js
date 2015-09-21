@@ -86,6 +86,7 @@ var App = React.createClass({
           <Tree
             paddingLeft={20}
             tree={this.state.tree}
+            onMove={this.handleMove}
             onChange={this.handleChange}
             isNodeCollapsed={this.isNodeCollapsed}
             renderNode={this.renderNode}
@@ -99,6 +100,10 @@ var App = React.createClass({
          </div>
       </div>
     );
+  },
+
+  handleMove(moveInfo) {
+    console.log('moveInfo', moveInfo);
   },
 
   handleChange(tree) {
